@@ -1,3 +1,4 @@
+import { SizeButton } from '@/components/size-button'
 import { api } from '@/data/api'
 import { Product } from '@/types/product'
 import Image from 'next/image'
@@ -57,30 +58,10 @@ export default async function ProductPage({ params }: ProductProps) {
         <div className="mt-8 space-y-4 ">
           <span className="block font-semibold">Tamanhos</span>
           <div className="flex gap-2">
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              P
-            </button>
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              M
-            </button>
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              G
-            </button>
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              GG
-            </button>
+            <SizeButton>P</SizeButton>
+            <SizeButton>M</SizeButton>
+            <SizeButton>G</SizeButton>
+            <SizeButton>GG</SizeButton>
           </div>
         </div>
         <button
