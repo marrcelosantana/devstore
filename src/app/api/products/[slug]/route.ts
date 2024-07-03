@@ -5,7 +5,7 @@ export async function GET(
   _: Request,
   { params }: { params: { slug: string } },
 ) {
-  await new Promise((resolve) => setTimeout(resolve, 3000)) // Simulando 3 segundos de delay.
+  await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulando 1 segundo de delay.
 
   const slug = z.string().parse(params.slug)
 
